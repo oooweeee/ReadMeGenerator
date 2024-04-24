@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
-const fs = require("fs");
-const colors = require("colors");
-const path = require("path");
-const inquirer = require("inquirer");
+const fs = require('fs');
+const colors = require('colors');
+const path = require('path');
+const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
 const questions = [
