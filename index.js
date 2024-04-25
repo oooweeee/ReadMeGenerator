@@ -111,7 +111,7 @@ function init() {
     //pass the answer to the big string
     const string = generateMarkdown(answers);
     //
-    FileSystem.writefile("readme.md", string);
+    writeToFile('README.md', generateMarkdown(answers));
   });
 }
 
