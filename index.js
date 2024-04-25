@@ -54,7 +54,48 @@ const questions = [
     message: 'Enter your email address:',
   },
 ];
+/// This function is for generating markdown README
+function generateMarkdown(data) {
+  const licenseBadge = data.license !== 'None' ? `!License` : '';
+  return `# ${data.title}
+${licenseBadge}
 
+## Description
+${data.description}
+
+## Table of Contents
+- Installation
+- Usage
+- License
+- Contributing
+- Tests
+- Questions
+
+## Installation
+\`\`\`
+${data.installation}
+\`\`\`
+
+## Usage
+${data.usage}
+
+## License
+${data.license !== 'None' ? `This project is licensed under the ${data.license} license.` : 'This project is not licensed.'}
+
+## Contributing
+${data.contribution}
+
+## Tests
+\`\`\`
+${data.tests}
+\`\`\`
+
+## Questions
+For any questions, please contact me with the information below:
+- GitHub: ${data.github}
+- Email: ${data.email}
+`;
+}
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
